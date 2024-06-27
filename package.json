@@ -2,12 +2,10 @@
   "name": "npm-actions-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "version": "run-s version:*",
-    "version:release": "npm version ${npm_package_version}",
     "version:git": "git add . && git commit -m \"chore(release): publish ${npm_package_version} --tag=alpha\"",
     "version:changelog": "conventional-changelog -p angular"
   },
