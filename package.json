@@ -1,6 +1,6 @@
 {
   "name": "npm-actions-example",
-  "version": "1.0.0",
+  "version": "3.6.29-harmony-hybrid-alpha.37",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
