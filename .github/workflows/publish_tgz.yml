@@ -137,8 +137,7 @@ jobs:
       # Generate Changelog
       - name: Generate Changelog
         run: |
-          pnpm run version:changelog > CHANGELOG.md
-          CHANGELOG=${cat CHANGELOG.md}
+          CHANGELOG=$(pnpm run version:changelog)
           echo "CHANGELOG=${CHANGELOG}" >> $GITHUB_ENV
 
       # Create git tag
