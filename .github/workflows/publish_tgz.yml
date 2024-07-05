@@ -138,9 +138,6 @@ jobs:
       - name: Generate Changelog
         run: |
           pnpm run version:changelog > CHANGELOG.md
-          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-          cat CHANGELOG.md >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
           
       # Create git tag
       - name: Create Git Tag
@@ -161,6 +158,6 @@ jobs:
         with:
           tag_name: v${{ env.CURRENT_VERSION }}
           release_name: Release v${{ env.CURRENT_VERSION }}
-          body: ${{ env.CHANGELOG }}
+          body_path: CHANGELOG.md
           draft: false
           prerelease: false
